@@ -24,8 +24,40 @@ else
 MESSAGE_ERROR
 
 }
-//console.log(getAllData())
+console.log(getAllData())
 
 
 
-const getA
+// const getProfileUser = function(id){
+//     let message = {status: true, statuscode: 200, development: 'Aline Alves de Soua', id: '', nome: '', nick: '', foto: '',
+//                    numero: '', cor_de_fundo: '', criacao: '', encerramento: ''}
+       
+//     //let profile = dados.contatos["whats-users"].forEach(function(item.id)
+//     const profile = dados.contatos["whats-users"].forEach(function(item){
+//         message.data.push(item.id)
+    
+//     })
+
+
+//     if(message){
+
+//         message.id = profile.id
+//         message.nome = profile.account
+//         message.nick = profile.nickname
+//         message.foto = profile['profile-image']
+//         message.numero = profile.number
+//         message.cor_de_fundo = profile.background
+//         return message
+//     }
+//     else {
+//         return MESSAGE_ERROR
+//     }
+// }
+ 
+// console.log(getProfileUser())
+
+// "created-since": 
+//                   {
+//                     "start" : "2015-08-23",
+//                     "end"   : "null"
+//                   }
