@@ -29,8 +29,9 @@ const getAllData = function () {
   if (message) return message;
   else MESSAGE_ERROR;
 };
-//console.log(getAllData())
+//console.log(getAllData());
 
+//******************************************************************************************************************************** */
 const getProfileUser = function (number) {
   let message = {
     status: true,
@@ -45,7 +46,7 @@ const getProfileUser = function (number) {
     fimConta: '',
   };
 
-  const profile = dados.contatos['whats-users'].find(function (number) {
+  let profile = dados.contatos['whats-users'].find(function (number) {
     return number => item.number === number;
   });
 
@@ -61,3 +62,35 @@ const getProfileUser = function (number) {
   } else return MESSAGE_ERROR;
 };
 //console.log(getProfileUser(11987876567));
+//******************************************************************************************************************************* */
+
+function getContactsUser(userNumber) {
+  const message = { status: true, statuscode: 200, usuario: '', contatos: '' };
+  const user = dados.contatos['whats-users'].find(
+    item => item.number === userNumber
+  );
+
+  if (user) {
+    message.usuario = user.account;
+    message.contatos = user.contacts;
+    return message;
+  } else return MESSAGE_ERROR;
+}
+//console.log(getContactsUser('11987876567'));
+
+//******************************************************************************************************************** */
+function getContactMessage(contactNumber) {
+  const message = { status: true, statuscode: 200, contato: '', mensagens: '' };
+  const contact = dados.contatos['whats-users'].find(
+    item => item.number === contactNumber
+  );
+
+  if (contact) {
+   
+    message.contato = contact.name;
+    message.mensagens = contact.messages
+    return message;
+  } else return MESSAGE_ERROR;
+}
+console.log(getContactMessage('26999999963'));
+//****************************************************************************************************************** */
